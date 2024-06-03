@@ -34,13 +34,6 @@ class Main {
         return content.toString();
     }
 
-    private static Map<String, Object> createStudent(String name, boolean needSupport) {
-        Map<String, Object> student = new HashMap<>();
-        student.put("name", name);
-        student.put("needSupport", needSupport);
-        return student;
-    }
-
     private static String mapToJson(Map<String, Object> map, int level) {
         StringBuilder json = new StringBuilder();
         json.append("{\n");
