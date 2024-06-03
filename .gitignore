@@ -1,0 +1,16 @@
+out
+.idea
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+.env
+.venv
+venv
+ENV
+env.bak
+venv.bak
+.idea
+.DS_Store

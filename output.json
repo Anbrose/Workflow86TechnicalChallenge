@@ -1,0 +1,43 @@
+{
+    "description": "class for year 1",
+    "groups": [
+        {
+            "students": [
+                {
+                    "needSupport": false,
+                    "name": "student A"
+                },
+                {
+                    "needSupport": true,
+                    "name": "student B"
+                },
+                {
+                    "needSupport": false,
+                    "name": "student C"
+                }
+            ],
+            "group": 1.0
+        },
+        {
+            "students": [
+                {
+                    "needSupport": false,
+                    "name": "student D"
+                },
+                {
+                    "needSupport": true,
+                    "name": "student E"
+                }
+            ],
+            "group": 2.0
+        }
+    ],
+    "naughtyList": [
+        {
+            "needSupport": true,
+            "name": "student E"
+        }
+    ],
+    "className": "year 1",
+    "numberOfStudents": 5.0
+}
