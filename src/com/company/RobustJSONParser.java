@@ -82,6 +82,10 @@ public class RobustJSONParser {
                 sb.append(input.charAt(pos));
                 pos++;
             }
+
+            if (pos == length){
+                return new Token(TokenType.STRING, null);
+            }
             pos++;  // skip closing quote
             return new Token(TokenType.STRING, sb.toString());
         }
@@ -143,10 +147,16 @@ public class RobustJSONParser {
             if (currentToken.type != TokenType.STRING) {
                 throw new RuntimeException("Expected string for key but got: " + currentToken.value);
             }
+
             String key = currentToken.value;
+            if (key == null){
+                // means this key is already incomplete.
+                break;
+            }
             nextToken(); // skip key
             if (currentToken.type != TokenType.COLON) {
-                throw new RuntimeException("Expected ':' but got: " + currentToken.value);
+                object.put(key, null);
+                break;
             }
             nextToken(); // skip ':'
             Object value = parseValue();

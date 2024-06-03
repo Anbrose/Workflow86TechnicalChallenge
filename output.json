@@ -1,3 +1,6 @@
 {
-    "className": null
+    "description": "class for year 1",
+    "className": "year 1",
+    "numberOfStudents": 5.0,
+    "group": null
 }
